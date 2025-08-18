@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Paludo | Desenvolvedor Web & Automações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purple-dark': '#4c1d95',
+                        'purple-darker': '#3c1a78'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 smooth-scroll">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-purple-dark">Victor Paludo</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-purple-dark transition-colors">Início</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-purple-dark transition-colors">Sobre</a>
+                    <a href="#servicos" class="text-gray-600 hover:text-purple-dark transition-colors">Serviços</a>
+                    <a href="#blog" class="text-gray-600 hover:text-purple-dark transition-colors">Blog</a>
+                    <a href="#contato" class="text-gray-600 hover:text-purple-dark transition-colors">Contato</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#inicio" class="block py-2 text-gray-600 hover:text-purple-dark">Início</a>
+                <a href="#sobre" class="block py-2 text-gray-600 hover:text-purple-dark">Sobre</a>
+                <a href="#servicos" class="block py-2 text-gray-600 hover:text-purple-dark">Serviços</a>
+                <a href="#blog" class="block py-2 text-gray-600 hover:text-purple-dark">Blog</a>
+                <a href="#contato" class="block py-2 text-gray-600 hover:text-purple-dark">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-20 pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="text-center fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                    <span class="text-purple-dark">Victor Paludo</span><br>
+                    Desenvolvedor Web
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Ajudo trabalhadores, pessoas e negócios a ampliarem sua presença online.<br> 
+                Crio sites profissionais e implemento automações para aumentar sua produtividade.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#servicos" class="bg-purple-dark hover:bg-purple-darker text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Ver Serviços
+                    </a>
+                    <a href="#contato" class="border-2 border-purple-dark text-purple-dark hover:bg-purple-dark hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Entrar em Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Quem é Victor Paludo</h2>
+                    <p class="text-gray-600 mb-4">
+                        Sou desenvolvedor web e ajudo pessoas, profissionais e negócios de diferentes áreas a conquistarem mais visibilidade através da tecnologia.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Com experiência em empresas de contabilidade, conheço de perto as dores dos processos manuais e repetitivos. 
+                        Por isso, minha missão é criar sites modernos, implementar automações que economizam tempo e oferecer manutenção contínua, 
+                        garantindo que sua presença digital esteja sempre atualizada e segura.
+                    </p>
+                    <p class="text-gray-600">
+                        Atendo desde empreendedores individuais até pequenos e médios negócios que desejam crescer, se destacar e ter um suporte confiável no ambiente digital.
+                    </p>
+                </div>
+                <div class="fade-in">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Especialidades</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-dark rounded-full mr-3"></span>
+                                Sites Profissionais
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-dark rounded-full mr-3"></span>
+                                Automação de Processos
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-dark rounded-full mr-3"></span>
+                                Soluções Personalizadas
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-purple-dark rounded-full mr-3"></span>
+                                Presença Digital
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serviços</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ofereço soluções digitais para impulsionar seu negócio e aumentar sua produtividade.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Sites Profissionais -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow fade-in">
+                    <div class="w-12 h-12 bg-purple-dark rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17h4.5m-7.5-4.5h10.5m-12-4.5h13.5M4.5 6h15a2.25 2.25 0 012.25 2.25v7.5A2.25 2.25 0 0119.5 18h-15A2.25 2.25 0 012.25 15.75v-7.5A2.25 2.25 0 014.5 6z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Sites Profissionais</h3>
+                    <p class="text-gray-600">
+                        Criação de sites modernos e responsivos para negócios e profissionais. 
+                        Inclui landing pages, integrações com ferramentas digitais
+                        e manutenção contínua para garantir resultados duradouros.
+                    </p>
+                </div>
+
+                <!-- Automação de Processos -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow fade-in">
+                    <div class="w-12 h-12 bg-purple-dark rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Automação de Processos</h3>
+                    <p class="text-gray-600">
+                        Automatizo tarefas repetitivas e processos manuais do seu negócio. 
+                        Economize tempo e reduza erros com soluções personalizadas.
+                    </p>
+                </div>
+
+                <!-- Lojas Virtuais -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow fade-in">
+                    <div class="w-12 h-12 bg-purple-dark rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 7.5M17 13l1.5 7.5M9 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm8 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Lojas Virtuais</h3>
+                    <p class="text-gray-600">
+                        Criação de lojas online seguras e funcionais. 
+                        Venda seus produtos na internet e alcance novos clientes todos os dias.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Blog</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Compartilho conhecimentos e experiências sobre desenvolvimento web e soluções práticas.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow fade-in">
+                    <div class="p-6">
+                        <div class="text-sm text-purple-dark font-semibold mb-2">Presença Digital</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Por que Todo Profissional Precisa de um Site
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Descubra como ter um site profissional pode aumentar sua credibilidade 
+                            e atrair mais clientes para seu negócio.
+                        </p>
+                        <a href="#" class="text-purple-dark font-semibold hover:text-purple-darker">
+                            Ler mais →
+                        </a>
+                    </div>
+                </article>
+                <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow fade-in">
+                    <div class="p-6">
+                        <div class="text-sm text-purple-dark font-semibold mb-2">Automação</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            5 Processos Manuais que Você Pode Automatizar Hoje
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Identifique tarefas repetitivas no seu negócio que podem ser automatizadas 
+                            para economizar tempo e reduzir erros.
+                        </p>
+                        <a href="#" class="text-purple-dark font-semibold hover:text-purple-darker">
+                            Ler mais →
+                        </a>
+                    </div>
+                </article>
+                <article class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow fade-in">
+                    <div class="p-6">
+                        <div class="text-sm text-purple-dark font-semibold mb-2">Pequenos Negócios</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                            Como a Tecnologia Pode Fazer Seu Negócio Crescer
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Estratégias simples e práticas para usar a tecnologia como 
+                            ferramenta de crescimento do seu negócio.
+                        </p>
+                        <a href="#" class="text-purple-dark font-semibold hover:text-purple-darker">
+                            Ler mais →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold mb-6">Vamos Conversar</h2>
+                    <p class="text-gray-300 mb-8">
+                        Tem um projeto em mente ou precisa de uma solução específica? 
+                        Entre em contato e vamos discutir como posso ajudar.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-300">victormpaludo@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-300">+55 (49) 99112-0026</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-400 mr-3" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.004 2C6.478 2 2 6.477 2 12.004c0 1.962.519 3.88 1.507 5.559L2 22l4.58-1.484a9.96 9.96 0 005.424 1.588h.001c5.526 0 10.004-4.477 10.004-10.004C22.009 6.478 17.53 2 12.004 2zm0 18.283h-.001a8.26 8.26 0 01-4.207-1.152l-.302-.18-2.719.882.889-2.654-.197-.326a8.27 8.27 0 01-1.272-4.603c0-4.558 3.711-8.268 8.268-8.268 2.211 0 4.287.861 5.845 2.42a8.21 8.21 0 012.422 5.847c0 4.558-3.71 8.268-8.268 8.268zm4.565-6.2c-.25-.125-1.474-.727-1.703-.81-.229-.084-.396-.125-.562.125s-.646.81-.793.974c-.146.166-.291.187-.541.063-.25-.125-1.055-.389-2.01-1.24-.743-.662-1.243-1.479-1.39-1.729-.146-.25-.016-.385.11-.51.113-.113.25-.292.375-.437.125-.146.166-.25.25-.416.084-.166.042-.312-.021-.437-.063-.125-.562-1.355-.77-1.857-.2-.48-.406-.415-.562-.424l-.479-.009c-.166 0-.437.062-.666.291-.229.229-.875.855-.875 2.084s.896 2.417 1.021 2.583c.125.166 1.764 2.693 4.28 3.775.598.258 1.065.413 1.428.528.6.19 1.147.164 1.58.1.483-.072 1.474-.601 1.682-1.182.208-.583.208-1.083.145-1.183-.062-.104-.229-.166-.479-.291z"/>
+                            </svg>
+                            <span class="text-gray-300">
+                                <a href="https://wa.me/5549991120026" target="_blank" class="underline hover:text-gray-200">
+                                    Entre em contato direto pelo WhatsApp
+                                </a>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-300">Chapecó, SC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <form class="space-y-6" action="https://formsubmit.co/victormpaludo@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://victorpaludo.com/obrigado.html">
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Nome</label>
+                            <input type="text" name="nome" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Mensagem</label>
+                            <textarea name="mensagem" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-dark hover:bg-purple-darker text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p>&copy; 2025 Victor Maier Paludo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form demo
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pela mensagem! Este é um formulário demonstrativo. Em um site real, a mensagem seria enviada.');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97150099d5ce5444',t:'MTc1NTU1Nzc2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
